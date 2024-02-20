@@ -18,4 +18,17 @@ contract MyNFT is ERC721, Ownable {
     function mint(address to, uint256 tokenId) external onlyOwner {
         _mint(to, tokenId);
     }
+
+    function approveForBridge(address operator, uint256 tokenId) external {
+        approve(operator, tokenId);
+    }
+
+    function balanceOf(address account) public view override returns (uint256) {
+        return super.balanceOf(account);
+    }
+
+    // Function to test balanceOf on Mumbai Testnet
+    function testBalanceOf(address account) external view returns (uint256) {
+        
+    }
 }
