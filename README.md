@@ -30,11 +30,13 @@ This repository contains the Solidity code for the MyNFT contract, an ERC721 tok
 3. Replace the placeholder image URLs in the contract with the URLs of your uploaded images.
 4. Deploy the contract to the Polygon (Matic) network using Truffle.
 
-### Interacting with the Contract
-
-- Use the `promptDescription` function to retrieve the description prompt.
-- Use the `mint` function to mint new NFTs (only the owner can mint).
-
+ **Interact with the Contract:**
+- After deploying, you can interact with your contract using the provided functions:
+  - `mint(address to, uint256 tokenId)`: Mint an NFT and assign it to the specified address.
+  - `approveForBridge(address operator, uint256 tokenId)`: Approve the transfer of an NFT to a bridge for further transfer.
+  - `balanceOf(address account)`: Get the balance of NFTs owned by an address.
+  - `promptDescription()`: Get the description prompt used to generate the images.
+  - `transfer`:To transfer  data.
 ## IPFS Details
 
 - **Provider:** Pinata
